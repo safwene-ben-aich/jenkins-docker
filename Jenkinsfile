@@ -1,5 +1,8 @@
 node {
     def app
+    //cleanup current user docker credentials
+    sh 'rm  ~/.dockercfg || true'
+    sh 'rm ~/.docker/config.json || true'
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
