@@ -1,6 +1,5 @@
 node {
     def app
-    sh 'cat $HOME/.docker/config.json'    
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
