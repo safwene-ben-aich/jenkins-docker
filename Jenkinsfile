@@ -28,7 +28,7 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused.*/
 	docker.withRegistry('https://324311873259.dkr.ecr.us-east-2.amazonaws.com', 'ecr:us-east-2:ecr-credentials'){
-	sh "cat ~/.docker/config.json"
+	sh "cat /testFile"
         docker.image('docker-jenkins-repo').push('latest')
         }
     }
